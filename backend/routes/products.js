@@ -30,7 +30,8 @@ router.get('/:id', async (req, res) => {
 router.post('/create', async (req, res) => {
   const product = new Product({
     name: req.body.name,
-    quantity: req.body.quantity
+    size: req.body.size,
+    price: req.body.price
   })
   try {
     const newProduct = await product.save()

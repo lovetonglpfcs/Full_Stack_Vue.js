@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
 // Creating one
 router.post('/create', async (req, res) => {
     const history = new History({
-      menu: req.body.menu,
-      topping: req.body.topping,
+      name: req.body.name,
       size: req.body.size,
-      numberofglass: req.body.numberofglass,
-      price: req.body.price
+      numberofunit: req.body.numberofunit,
+      price: req.body.price,
+      customer: req.body.customer
     })
     try {
         console.log(history)

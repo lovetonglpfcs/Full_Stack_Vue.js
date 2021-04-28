@@ -1,11 +1,7 @@
 const mongoose = require('mongoose')
 
 const historySchema = new mongoose.Schema({
-  menu: {
-    type: String,
-    required: true
-  },
-  topping: {
+  name: { //menu
     type: String,
     required: true
   },
@@ -13,11 +9,15 @@ const historySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  numberofglass: {
+  numberofunit: { //numfoglass
     type: String,
     required: true
   },
   price: {
+    type: String,
+    required: true
+  },
+  customer: {
     type: String,
     required: true
   },

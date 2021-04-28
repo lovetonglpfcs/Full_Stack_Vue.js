@@ -2,33 +2,16 @@
   <div class="ctn">
       <div class="header">
         <div class="leftheader">
-          <div style="color: #CAFDEE; font-size: 15px">0</div>
           <p class="blockheader">Check Stock</p>
         </div>
         <div class="rightheader">
-          <p style="font-size: 12px; color: #CAFDEE">0</p>
+
           <router-link to="/"
             ><button
               class="headerbutton"
               style="background-color: #A6EBFA; margin-left: 130px;color: #000;"
             >
               Main Menu
-            </button></router-link
-          >
-         <router-link to="/makeOrder"
-            ><button
-              class="headerbutton"
-              style="background-color: #8AE3DB; margin-left: 50px;color: #000;"
-            >
-              Make Order
-            </button></router-link
-          >
-          <router-link to="/historySale"
-            ><button
-              class="headerbutton"
-              style="background-color: #9AFDD8; margin-left: 50px;color: #000;"
-            >
-              History Sale
             </button></router-link
           >
         </div>
@@ -38,9 +21,9 @@
           style="
             margin-top: 20px;
             margin-left: 45px;
-            background-color: #FBE6DB;
+            background-color: #9BC2EE;
             width: 95%;
-            height: 95%;
+            height: 900px;
           "
         >
         <!-- <div class="block" v-for="(product, i) in products" :key="product._id">
@@ -63,8 +46,9 @@
             <td style="height:109px;width: 2000px;" v-for="(product) in products.slice(0,5)" :key="product._id">
               
                     <p style="font-weight:bold;margin: 0 0 0 0;">{{ product.name }}</p>
-                    <p style="font-weight:bold;margin: 0 0 0 0;"  >คงเหลือ {{ product.quantity }}  แก้ว</p>
-                     <router-link :to="{name: 'insertProduct' , params:{id : product._id} }"><button  class="insert">เพิ่ม</button></router-link>
+                    <p style="font-weight:bold;margin: 0 0 0 0;"  >Size : {{ product.size }}</p>
+                    <p style="font-weight:bold;margin: 0 0 0 0;"  >Price : {{ product.price }}</p>
+
             </td>
             
           </tr>
@@ -100,8 +84,9 @@
             <td style="height:109px;width: 2000px;" v-for="(product) in products.slice(5,10)" :key="product._id">
               
                     <p style="font-weight:bold;margin: 0 0 0 0;">{{ product.name }}</p>
-                    <p style="font-weight:bold;margin: 0 0 0 0;"  >คงเหลือ {{ product.quantity }}  แก้ว</p>
-                    <router-link :to="{name: 'insertProduct' , params:{id : product._id} }"><button  class="insert">เพิ่ม</button></router-link>
+                    <p style="font-weight:bold;margin: 0 0 0 0;"  >Size : {{ product.size }}</p>
+                    <p style="font-weight:bold;margin: 0 0 0 0;"  >Price : {{ product.price }}</p>
+                    
             </td>
             
           </tr>
@@ -193,9 +178,9 @@ img {
 }
 
 .ctn {
-  background-color: #cafdee;
+  background-color: #002e69;
   width: 100%;
-  height: 969px;
+  height: 1100px;
   margin: 0;
   
 }
@@ -229,10 +214,10 @@ img {
   width: 90%;
   height: 70%;
   color: rgb(255, 255, 255);
-  background-color: #facacb;
+  background-color: #06ffff;
 }
 .blockheader:hover {
-  background-color: #d4abac;
+  background-color: #688CDE;
 }
 
 .headerbutton {

@@ -5,14 +5,13 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  quantity: {
+  size: {
     type: String,
     required: true
   },
-  Date: {
-    type: Date,
-    required: true,
-    default: Date.now
+  price: {
+    type: String,
+    required: true
   }
 }, {
   collection: 'products'

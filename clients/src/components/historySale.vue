@@ -15,22 +15,7 @@
             Main Menu
           </button></router-link
         >
-        <router-link to="/makeOrder"
-          ><button
-            class="headerbutton"
-            style="background-color: #9abce3; margin-left: 50px"
-          >
-            Make Order
-          </button></router-link
-        >
-        <router-link to="/checkStock"
-          ><button
-            class="headerbutton"
-            style="background-color: #b6c4fa; margin-left: 50px"
-          >
-            Check Stock
-          </button></router-link
-        >
+        
       </div>
     </div>
     <div class="Body">
@@ -47,10 +32,9 @@
         <table align="center" style="background: white; margin-top: 10px">
           <tr style="font-weight: bold; font-size: 18px">
             <td style="width: 100px">รายการที่</td>
-            <td style="width: 400px">เมนู</td>
-            <td style="width: 250px">ท็อปปิ้ง</td>
-            <td style="width: 250px">ขนาดแก้ว</td>
-            <td style="width: 100px">จำนวนแก้ว</td>
+            <td style="width: 400px">ชื่อ</td>
+            <td style="width: 250px">Size</td>
+            <td style="width: 100px">จำนวนตัว</td>
             <td style="width: 250px">ราคา</td>
             <td style="width: 300px">วันที่</td>
             <td
@@ -64,11 +48,10 @@
             style="font-size: 17px"
           >
             <td style="width: 100px">{{ i + 1 }}</td>
-            <td style="text-align: left; width: 400px">{{ history.menu }}</td>
-            <td style="width: 250px">{{ history.topping }}</td>
+            <td style="text-align: left; width: 400px">{{ history.name }}</td>
             <td style="width: 250px">{{ history.size }}</td>
-            <td style="width: 100px">{{ history.numberofglass }}</td>
-            <td style="width: 250px">{{ history.price }}</td>
+            <td style="width: 250px">{{ history.numberofunit }}</td>
+            <td style="width: 100px">{{ history.price }}</td>
             <td style="width: 300px">
               {{ history.date.slice(0, 10) }}
             </td>
