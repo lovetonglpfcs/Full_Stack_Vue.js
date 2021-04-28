@@ -7,8 +7,8 @@
         <div class="rightheader">
           <router-link to="/"
             ><button
-              class="headerbutton"
-              style="background-color: #fdbca9; margin-left: 130px; color: #000"
+              class="blockheader"
+              style="background-color: #E4EAF2;"
             >
               Main Menu
             </button></router-link>
@@ -16,33 +16,45 @@
         </div>
       </div>
       <div class="Body">
-        <div class="leftbody">
+        
+
+        <div>
           <div
             style="
               margin: 20px;
-              background-color: #facacb;
+              background-color: #A3C2CC;
               width: 95%;
               height: 95%;
             "
           >
-            <center>
-              <pre> </pre>
-              <div
+         <center> <p style="font-size:50px;font-weight: bold;">Preview</p>
+          <div >
+            <div style="width:393px;height:408px; background-color: rgba(0,0,0,0.1);">
+              <img style="margin: 0 0 0 0;width:300px " :src="image">
+            </div>
+            
+            </div>
+            <div style="margin-top: 10px;"><p style="font-size:20px" >จำนวนสินค้าในคลัง : {{ quantity }}</p></div>
+          <div style="margin-top: 20px;"><span  >{{ message }}</span></div>
+          <div style="margin-top: 5px;"><span  >ราคา : {{ tmp }} บาท</span></div>
+          <div v-show="btn" style="margin-top: 5px;"><span  >จำนวน</span> <input @click="totalprice" type="number" min=1 v-model="unitquantity" ></div>
+          
+          <div
                 style="
                   border-radius: 25px;
                   height: 140px;
                   width: 70%;
-                  background-color: #f5ebeb;
+                  background-color: #B8DBE6;
                   margin-top: 10px;
                 "
               >
                 <pre style="font-size: 1px"> </pre>
-                <p style="margin-top: 10px; font-size: 30px" >Menu</p>
+                <p style="margin-top: 10px; font-size: 30px" >Shirt</p>
                 <select
                   align="center"
                   style="
                     font-size: 18px;
-                    background-color: #e7e2e3;
+                    background-color: #E4EAF2;
                     width: 350px;
                     height: 40px;
                   "
@@ -61,15 +73,13 @@
                   <option value="เสื้อยืดลายกราฟิกผู้ชาย_BASEBALL">เสื้อยืดลายกราฟิกผู้ชาย_BASEBALL</option>
                 </select>
               </div>
-               <br />
-              
-
-              <div
+              <br>
+          <div
                 style="
                   border-radius: 25px;
                   height: 140px;
                   width: 70%;
-                  background-color: #f5ebeb;
+                  background-color: #B8DBE6;
                 "
               >
                 <pre style="font-size: 1px"> </pre>
@@ -78,42 +88,23 @@
                   align="center"
                   style="
                     font-size: 18px;
-                    background-color: #e7e2e3;
+                    background-color: #E4EAF2;
                     width: 350px;
                     height: 40px;
                   "
                   v-model="customer"
                 >
-              </div>
-            </center>
-          </div>
-        </div>
+            </div>
+          
 
-        <div class="rightbody">
-          <div
-            style="
-              margin: 20px;
-              background-color: #facacb;
-              width: 95%;
-              height: 95%;
-            "
-          >
-         <center> <p style="font-size:50px;font-weight: bold;">Preview</p>
-          <div >
-            <div style="width:393px;height:408px; background-color: rgba(0,0,0,0.1);">
-              <img style="margin: 0 0 0 0;width:300px " :src="image">
-            </div>
-            
-            </div>
-            <div style="margin-top: 10px;"><p style="font-size:20px" >จำนวนสินค้าในคลัง : {{ quantity }}</p></div>
-          <div style="margin-top: 20px;"><span  >{{ message }}</span></div>
-          <div style="margin-top: 5px;"><span  >ราคา : {{ tmp }} บาท</span></div>
-          <div v-show="btn" style="margin-top: 5px;"><span  >จำนวน</span> <input @click="totalprice" type="number" min=1 v-model="unitquantity" ></div>
+
+
           
-          
-          <button v-show="btn"  @click.prevent="handleSubmitForm" class="headerbutton" style="margin-top: 20px;padding: 15px 30px;font-size:20px;background-color:#fab3c3;color: #000;">Make Order</button>
+          <button v-show="btn"  @click.prevent="handleSubmitForm" class="headerbutton" style="margin-top: 20px;padding: 15px 30px;font-size:20px;background-color:rgb(255, 255, 255);color: #000;">Make Order</button>
           
           <button v-show="btn1"   class="btn-not" style="cursor:not-allowed;margin-top: 55px;padding: 15px 30px;font-size:20px;">Make Order</button>
+            
+            
             </center>
           </div>
         </div>
@@ -264,7 +255,7 @@ export default {
           this.size  = this.product[9].size
           this.totalprice();
       }
-    this.message = this.history.name +', Size : '+ this.history.size
+    this.message = 'Size : '+ this.history.size
   }
 
 }
@@ -272,7 +263,7 @@ export default {
 
 <style scoped>
 .btn-not {
-  background-color: rgb(202, 38, 38);
+  background-color: rgb(82, 123, 255);
   color: rgb(255, 255, 255);
   padding: 20px 30px;
   font-size: 25px;
@@ -294,13 +285,13 @@ button:hover {
 
 span {
   font-size: 25px;
-  background-color:rgb(240, 234, 234);
+  background-color:#D8DEE6;
   cursor:default;
 }
 .ctn {
-  background-color: #ffffff;
+  background-color: #56666B;
   width: 100%;
-  height: 969px;
+  height: 1300px;
   margin: 0;
 }
 .header {
@@ -320,19 +311,9 @@ span {
 .rightheader {
   width: 50%;
   height: 100%;
-  float: left;
-}
-.leftbody {
-  width: 50%;
-  height: 100%;
-  float: left;
+  float: right;
 }
 
-.rightbody {
-  width: 50%;
-  height: 100%;
-  float: left;
-}
 .blockheader {
   margin-left: 3%;
   margin-top: 0px;
@@ -344,10 +325,10 @@ span {
   width: 90%;
   height: 70%;
   color: rgb(255, 255, 255);
-  background-color: #f79b8f;
+  background-color: #859EA6;
 }
 .blockheader:hover {
-  background-color: #d1857b;
+  background-color: #859EA6;
 }
 
 .headerbutton {
@@ -355,7 +336,6 @@ span {
   padding: 20px 30px;
   font-size: 25px;
   border-radius: 15px;
-  border: 1px solid #000;
 }
 
 </style>

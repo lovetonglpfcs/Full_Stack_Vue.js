@@ -8,8 +8,7 @@
 
           <router-link to="/"
             ><button
-              class="headerbutton"
-              style="background-color: #A6EBFA; margin-left: 130px;color: #000;"
+              class="blockheader"
             >
               Main Menu
             </button></router-link
@@ -201,7 +200,7 @@ img {
   width: 90%;
   height: 70%;
   color: rgb(255, 255, 255);
-  background-color: #06ffff;
+  background-color: #688CDE;;
 }
 .blockheader:hover {
   background-color: #688CDE;

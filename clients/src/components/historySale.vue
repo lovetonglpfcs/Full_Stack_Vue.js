@@ -2,15 +2,13 @@
   <div class="ctn">
     <div class="header">
       <div class="leftheader">
-        <div style="cursor: default; color: #81f2fd; font-size: 15px">0</div>
         <p class="blockheader">History Sale</p>
       </div>
       <div class="rightheader">
-        <p style="cursor: default; font-size: 12px; color: #81f2fd">0</p>
         <router-link to="/"
           ><button
-            class="headerbutton"
-            style="background-color: #ace7fd; margin-left: 130px"
+            class="blockheader"
+            style="background-color: #909CA6;"
           >
             Main Menu
           </button></router-link
@@ -23,7 +21,7 @@
         style="
           margin-top: 20px;
           margin-left: 45px;
-          background-color: #eefad5;
+          background-color: #D5E7F5;
           width: 95%;
           height: 95%;
         "
@@ -131,7 +129,7 @@ tr:hover {
 }
 
 .ctn {
-  background-color: #81f2fd;
+  background-color: #5F676E;
   width: 100%;
   height: 969px;
   margin: 0;
@@ -167,7 +165,7 @@ tr:hover {
   width: 90%;
   height: 70%;
   color: rgb(255, 255, 255);
-  background-color: #58e0fd;
+  background-color: #909CA6;
   cursor: default;
 }
 .blockheader:hover {
