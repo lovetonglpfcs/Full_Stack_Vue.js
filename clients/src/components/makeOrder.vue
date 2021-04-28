@@ -8,7 +8,6 @@
           <router-link to="/"
             ><button
               class="blockheader"
-              style="background-color: #E4EAF2;"
             >
               Main Menu
             </button></router-link>
@@ -43,7 +42,7 @@
                 style="
                   border-radius: 25px;
                   height: 140px;
-                  width: 70%;
+                  width: 50%;
                   background-color: #B8DBE6;
                   margin-top: 10px;
                 "
@@ -78,7 +77,7 @@
                 style="
                   border-radius: 25px;
                   height: 140px;
-                  width: 70%;
+                  width: 50%;
                   background-color: #B8DBE6;
                 "
               >
