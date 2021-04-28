@@ -26,19 +26,6 @@
             height: 900px;
           "
         >
-        <!-- <div class="block" v-for="(product, i) in products" :key="product._id">
-            <center>
-                <div class="field" >
-                    <img :src='image.img1' >
-                    <p style="font-weight:bold;margin: 0 0 0 0;">{{ i }}</p>
-                    <p style="font-weight:bold;margin: 0 0 0 0;"  >คงเหลือ {{ product.quantity }}  แก้ว</p>
-                    <button @click.prevent="handleClick(product._id)" class="insert">เพิ่ม</button>
-                </div>
-            </center>
-           
-        </div>
-      -->
-
       <table  border="1" >
         
         <Tbody>

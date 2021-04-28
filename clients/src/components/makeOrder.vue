@@ -120,18 +120,18 @@
       </div>
     </div>
 </template>
-
+<!--     ***********************************************************************************************************************     -->
 <script>
 import axios from 'axios'
 
 export default {
   data(){
     return {
-      tmp: '0',
+      tmp: 0,
       btn : true,
       btn1 : false,
       image: '',
-      customer:'Insert name',
+      customer:'',
       menu: 'เสื้อสเวตเตอร์คอกลมผู้ชาย ผ้าแฟลตนิต',
       size: 'L',
       message : '',
@@ -165,14 +165,9 @@ export default {
   methods: {
     clickmenu(){
       for(var i in this.product){
-      /*if(this.product[i].quantity == 0 && this.product[i].name === this.menu){
-        this.btn = false
-        this.btn1 = true
-        break;
-      }*/
       this.btn = true
       this.btn1 = false
-    }
+      }
     },
     totalprice(){
       
@@ -180,23 +175,9 @@ export default {
       this.tmp = this.tmp * this.unitquantity
     },
     async handleSubmitForm(){
-      //console.log('++');
-       // let r = confirm('ต้องการทำรายการนี้ ?')
-       // if (r){
        for(let i = 0; i < this.product.length; i++){
           if (this.menu == this.product[i].name){
             this.product = this.product[i]
-
-            //  update data
-            /* let apiURL = `http://localhost:4000/api/update/${this.product._id}`;
-            await axios.put(apiURL, this.product).then((res) => {
-                console.log(res)
-                //this.$router.push('/makeOrder')
-            }).catch(error => {
-                console.log(error)
-            })*/
-
-            // create history
              let apiURL = 'http://localhost:4000/api-history/create';
               await axios.post(apiURL, this.history).then(() => {
                 this.history = {
@@ -209,89 +190,81 @@ export default {
             }).catch(error => {
                 console.log(error)
             })
-
-            
-            
           }
        }
        this.$router.go(this.$router.currentRoute)
-     // }
     }
     
   },
   updated(){
-    //console.log(this.product.length)
-
 
     this.history.customer = this.customer
     this.history.name = this.menu
     this.history.price = this.tmp
     this.history.numberofunit = this.unitquantity
     this.history.size = this.size
-    //console.log( this.history.menu + " " + this.history.topping + " " + this.history.size +" " + this.history.numberofglass + " " + this.history.price)
-    
-/*
-    if (this.size == 'S' && this.topping == 'ไม่ใส่') this.price = 20;
-    else if (this.size == 'M' && this.topping == 'ไม่ใส่') this.price = 25;
-    else if (this.size == 'L' && this.topping == 'ไม่ใส่') this.price = 30;
-    else if (this.size == 'S' ) this.price = 25;
-    else if (this.size == 'M' )  this.price = 30;
-    else if (this.size == 'L' )  this.price = 35;
-*/
-
-      
 
     if (this.menu == 'เสื้อสเวตเตอร์คอกลมผู้ชาย ผ้าแฟลตนิต'){
           this.image = require('@/assets/img/makeorder/1.png')
           this.price = parseInt(this.product[0].price)
           this.size  = this.product[0].size
+          this.totalprice();
       }
       else if (this.menu == 'เสื้อยืดแขนสั้น ลายพิมพ์'){
           this.image = require('@/assets/img/makeorder/2.png')
           this.price = parseInt(this.product[1].price)
           this.size  = this.product[1].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดลายกราฟิกผู้ชาย'){
           this.image = require('@/assets/img/makeorder/3.png')
           this.price = parseInt(this.product[2].price)
           this.size  = this.product[2].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดคอกลมผู้ชาย ปักสิงห์'){
           this.image = require('@/assets/img/makeorder/4.png')
           this.price = parseInt(this.product[3].price)
           this.size  = this.product[3].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อเชิ้ตแขนสั้นผู้ชาย พิมพ์ลาย'){
           this.image = require('@/assets/img/makeorder/5.png')
           this.price = parseInt(this.product[4].price)
           this.size  = this.product[4].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อเชิ้ตแขนสั้นผู้ชาย พิมพ์ลายทรอปิคอล'){
           this.image = require('@/assets/img/makeorder/6.png')
           this.price = parseInt(this.product[5].price)
           this.size  = this.product[5].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดลายกราฟิกผู้ชาย'){
           this.image = require('@/assets/img/makeorder/7.png')
           this.price = parseInt(this.product[6].price)
           this.size  = this.product[6].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดลายผู้ชาย_GOOD_GAME'){
           this.image = require('@/assets/img/makeorder/8.png')
           this.price = parseInt(this.product[7].price)
           this.size  = this.product[7].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดลายกราฟิกผู้ชาย_HITHARD'){
           this.image = require('@/assets/img/makeorder/9.png')
           this.price = parseInt(this.product[8].price)
           this.size  = this.product[8].size
+          this.totalprice();
       }
        else if (this.menu == 'เสื้อยืดลายกราฟิกผู้ชาย_BASEBALL'){
           this.image = require('@/assets/img/makeorder/10.png')
           this.price = parseInt(this.product[9].price)
           this.size  = this.product[9].size
+          this.totalprice();
       }
-    this.message = this.history.menu +', Size : '+ this.history.size + this.history.customer + this.history.price + this.history.numberofunit
+    this.message = this.history.name +', Size : '+ this.history.size
   }
 
 }

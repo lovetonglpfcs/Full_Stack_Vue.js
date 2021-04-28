@@ -32,13 +32,14 @@
         <table align="center" style="background: white; margin-top: 10px">
           <tr style="font-weight: bold; font-size: 18px">
             <td style="width: 100px">รายการที่</td>
-            <td style="width: 400px">ชื่อ</td>
-            <td style="width: 250px">Size</td>
+            <td style="width: 300px">ชื่อ</td>
+            <td style="width: 400px">รายกายที่ซื้อ</td>
+            <td style="width: 100px">Size</td>
             <td style="width: 100px">จำนวนตัว</td>
-            <td style="width: 250px">ราคา</td>
-            <td style="width: 300px">วันที่</td>
+            <td style="width: 125px">ราคา</td>
+            <td style="width: 250px">วันที่</td>
             <td
-              style="width: 100px; border-top: 2px solid rgb(255, 255, 255);border-right: 2px solid rgb(255, 255, 255);"
+              style="width: 100px;"
             ></td>
           </tr>
 
@@ -47,15 +48,16 @@
             :key="history._id"
             style="font-size: 17px"
           >
-            <td style="width: 100px">{{ i + 1 }}</td>
-            <td style="text-align: left; width: 400px">{{ history.name }}</td>
-            <td style="width: 250px">{{ history.size }}</td>
-            <td style="width: 250px">{{ history.numberofunit }}</td>
-            <td style="width: 100px">{{ history.price }}</td>
-            <td style="width: 300px">
+            <td>{{ i + 1 }}</td>
+            <td>{{ history.customer }}</td>
+            <td style="text-align: left;">{{ history.name }}</td>
+            <td>{{ history.size }}</td>
+            <td>{{ history.numberofunit }}</td>
+            <td>{{ history.price }}</td>
+            <td>
               {{ history.date.slice(0, 10) }}
             </td>
-            <td style="width: 100px"><div class="delete" @click="handleDelete(history._id)" style="">Delete</div></td>
+            <td><div class="delete" @click="handleDelete(history._id)" style="">Delete</div></td>
           </tr>
         </table>
       </div>
